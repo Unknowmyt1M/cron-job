@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: cron-job
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    schedule: "*/15 * * * *"  # Every 15 minutes
